@@ -1,0 +1,26 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#f25102", fontcolor="#ffffff", fontsize="10.00", label="partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&)\n91.77%\n(6.05%)"];
+	1 -> 2 [arrowsize="0.93", color="#e98703", fontcolor="#e98703", fontsize="10.00", label="85.67%\n153026×", labeldistance="3.43", penwidth="3.43"];
+	2 [color="#e98703", fontcolor="#ffffff", fontsize="10.00", label="train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&)\n85.67%\n(5.95%)\n14537377×"];
+	2 -> 2 [arrowsize="0.93", color="#e98703", fontcolor="#e98703", fontsize="10.00", label="14384351×", labeldistance="3.43", penwidth="3.43"];
+	2 -> 3 [arrowsize="0.79", color="#6dc808", fontcolor="#6dc808", fontsize="10.00", label="63.19%\n16383×", labeldistance="2.53", penwidth="2.53"];
+	2 -> 4 [arrowsize="0.35", color="#0d1e78", fontcolor="#0d1e78", fontsize="10.00", label="3.92%\n956747121×", labeldistance="0.50", penwidth="0.50"];
+	2 -> 5 [arrowsize="0.35", color="#0d2d7c", fontcolor="#0d2d7c", fontsize="10.00", label="7.22%\n169408×", labeldistance="0.50", penwidth="0.50"];
+	2 -> 7 [arrowsize="0.35", color="#0d247a", fontcolor="#0d247a", fontsize="10.00", label="5.34%\n306050×", labeldistance="0.50", penwidth="0.50"];
+	3 [color="#6dc808", fontcolor="#ffffff", fontsize="10.00", label="solve_l2r_l1l2_svc(SMat<float>*, int*, float*, float, float, float, int)\n63.19%\n(63.19%)\n16383×"];
+	4 [color="#0d2e7c", fontcolor="#ffffff", fontsize="10.00", label="std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&)\n7.37%\n(7.37%)\n1797980448×"];
+	5 [color="#0d2d7c", fontcolor="#ffffff", fontsize="10.00", label="balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&)\n7.22%\n(3.37%)\n1699658×"];
+	5 -> 5 [arrowsize="0.35", color="#0d2d7c", fontcolor="#0d2d7c", fontsize="10.00", label="1530250×", labeldistance="0.50", penwidth="0.50"];
+	5 -> 8 [arrowsize="0.35", color="#0d1c77", fontcolor="#0d1c77", fontsize="10.00", label="3.68%\n158383×", labeldistance="0.50", penwidth="0.50"];
+	6 [color="#0d277a", fontcolor="#ffffff", fontsize="10.00", label="etext\n5.96%\n(2.47%)"];
+	6 -> 4 [arrowsize="0.35", color="#0d1a77", fontcolor="#0d1a77", fontsize="10.00", label="3.02%\n735945464×", labeldistance="0.50", penwidth="0.50"];
+	6 -> 8 [arrowsize="0.35", color="#0d0e73", fontcolor="#0d0e73", fontsize="10.00", label="0.38%\n16383×", labeldistance="0.50", penwidth="0.50"];
+	7 [color="#0d247a", fontcolor="#ffffff", fontsize="10.00", label="predict_trees(SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&, float&)\n5.34%\n(5.34%)\n14718241×"];
+	7 -> 7 [arrowsize="0.35", color="#0d247a", fontcolor="#0d247a", fontsize="10.00", label="14412191×", labeldistance="0.50", penwidth="0.50"];
+	8 [color="#0d1e78", fontcolor="#ffffff", fontsize="10.00", label="Tree::Tree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int)\n4.06%\n(4.06%)\n174766×"];
+	9 [color="#0d0f73", fontcolor="#ffffff", fontsize="10.00", label="mult_d_s_vec(float*, std::pair<int, float>*, int)\n0.50%\n(0.19%)"];
+	9 -> 4 [arrowsize="0.35", color="#0d0e73", fontcolor="#0d0e73", fontsize="10.00", label="0.31%\n76028564×", labeldistance="0.50", penwidth="0.50"];
+}

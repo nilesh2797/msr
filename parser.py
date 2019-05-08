@@ -46,7 +46,6 @@ for filename in os.listdir(directory):
 	from nltk.corpus import stopwords 
 
 	stop_words = set(stopwords.words('english')) 
-	# filtered_bag = [w for w in word_tokens if not w in stop_words]
 
 	for stopw in stop_words:
 		if stopw in bag:

@@ -1,6 +1,9 @@
 #include "parabel.h"
+#include <chrono>
+#include <sstream>
 
 using namespace std;
+using namespace std::chrono;
 
 mutex mtx;
 thread_local mt19937 reng; // random number generator used during training 
@@ -571,6 +574,39 @@ void split_node( Node* node, SMatF* X_Xf, SMatF* Y_X, SMatF* cent_mat, _int nr, 
 	delete assign_mat;
 }
 
+long long write_duration = 0, prepend_duration = 0, del_duration = 0;
+const size_t buffer_size = 131072;
+stringstream ss;
+
+size_t getsize(stringstream& ss)
+{
+	ss.seekg(0, ios::end);
+	size_t size = ss.tellg();
+	ss.seekg(0, ios::beg);
+
+	return size;
+}
+
+void flushss(ofstream& fout)
+{
+	fout << ss.rdbuf();
+	ss.str(string());
+}
+
+void writenode(Node* node, ofstream& fout)
+{
+	high_resolution_clock::time_point t1 = high_resolution_clock::now();
+
+	ss << (*node);
+
+	if(getsize(ss) > buffer_size)
+		flushss(fout);
+
+	high_resolution_clock::time_point t2 = high_resolution_clock::now();
+
+	write_duration += duration_cast<microseconds>( t2 - t1 ).count();
+}
+
 Tree* train_tree( SMatF* trn_X_Xf, SMatF* trn_Y_X, SMatF* cent_mat, Param& param, _int tree_no, string model_dir )
 {
 	reng.seed(tree_no);
@@ -588,10 +624,14 @@ Tree* train_tree( SMatF* trn_X_Xf, SMatF* trn_Y_X, SMatF* cent_mat, Param& param
 
 	string filename = model_dir + "/" + to_string( tree_no ) + ".tree";
 	ofstream fout;
-	std::vector<char> buf(131072);
-	fout.rdbuf()->pubsetbuf(&buf.front(), buf.size());
+	// std::vector<char> buf(65536);
+	// fout.rdbuf()->pubsetbuf(&buf.front(), buf.size());
 
 	fout.open( filename );
+
+	_int num_node = (pow(2, max_depth)-1 + 0.5);
+
+	fout << num_Xf << "\n" << num_Y << "\n" << num_node << "\n";
 
 	for(_int i=0; i<nodes.size(); i++)
 	{
@@ -638,20 +678,18 @@ Tree* train_tree( SMatF* trn_X_Xf, SMatF* trn_Y_X, SMatF* cent_mat, Param& param
 		delete n_trn_Y_X;
 		delete n_cent_mat;
 
-		fout << (*node);
+		writenode(node, fout);
 		delete node;
 	}
+
 	tree->num_Xf = num_Xf;
 	tree->num_Y = num_Y;
 
-	_int num_node = nodes.size();
+	flushss(fout);
 
 	fout.close();
 
-	std::string prepend_text = std::to_string(num_Xf) + "\\n" + std::to_string(num_Y) + "\\n" + std::to_string(num_node) + "\\n" ;
-	std::string prepend_command = std::string("sed -i.old '1s;^;") + prepend_text + ";' " + filename;
-
-	system(prepend_command.c_str());
+	cout << "model writing time : " << write_duration/1000000.0 << "s" << endl;
 	
 	return tree;
 }

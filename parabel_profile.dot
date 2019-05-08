@@ -1,0 +1,28 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#e4a304", fontcolor="#ffffff", fontsize="10.00", label="train_trees_thread(SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*)\n82.31%\n(0.00%)\n1×"];
+	1 -> 3 [arrowsize="0.91", color="#e4a404", fontcolor="#e4a404", fontsize="10.00", label="82.11%\n1×", labeldistance="3.28", penwidth="3.28"];
+	2 [color="#e4a304", fontcolor="#ffffff", fontsize="10.00", label="std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*), SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::reference_wrapper<float*> > > >::_M_run()\n82.31%\n(0.00%)"];
+	2 -> 1 [arrowsize="0.91", color="#e4a304", fontcolor="#e4a304", fontsize="10.00", label="82.31%\n1×", labeldistance="3.29", penwidth="3.29"];
+	3 [color="#e4a404", fontcolor="#ffffff", fontsize="10.00", label="train_tree(SMat<float>*, SMat<float>*, SMat<float>*, Param&, int)\n82.11%\n(7.83%)\n1×"];
+	3 -> 4 [arrowsize="0.84", color="#b3d406", fontcolor="#b3d406", fontsize="10.00", label="71.06%\n16383×", labeldistance="2.84", penwidth="2.84"];
+	3 -> 6 [arrowsize="0.35", color="#0d1375", fontcolor="#0d1375", fontsize="10.00", label="1.41%\n57332×", labeldistance="0.50", penwidth="0.50"];
+	3 -> 9 [arrowsize="0.35", color="#0d1274", fontcolor="#0d1274", fontsize="10.00", label="1.26%\n49149×", labeldistance="0.50", penwidth="0.50"];
+	3 -> 10 [arrowsize="0.35", color="#0d0f73", fontcolor="#0d0f73", fontsize="10.00", label="0.55%\n8191×", labeldistance="0.50", penwidth="0.50"];
+	4 [color="#b3d406", fontcolor="#ffffff", fontsize="10.00", label="svms(SMat<float>*, SMat<float>*, Param&)\n71.06%\n(1.46%)\n16383×"];
+	4 -> 5 [arrowsize="0.83", color="#a6d207", fontcolor="#a6d207", fontsize="10.00", label="69.60%\n686473×", labeldistance="2.78", penwidth="2.78"];
+	5 [color="#a6d207", fontcolor="#ffffff", fontsize="10.00", label="solve_l2r_l1l2_svc(SMat<float>*, int*, float*, float, float, float, int)\n69.60%\n(67.11%)\n686473×"];
+	5 -> 8 [arrowsize="0.35", color="#0d1776", fontcolor="#0d1776", fontsize="10.00", label="2.48%\n1360868744×", labeldistance="0.50", penwidth="0.50"];
+	6 [color="#0c678a", fontcolor="#ffffff", fontsize="10.00", label="balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&)\n18.10%\n(17.43%)\n43079640×"];
+	6 -> 6 [arrowsize="0.43", color="#0c678a", fontcolor="#0c678a", fontsize="10.00", label="42342022×", labeldistance="0.72", penwidth="0.72"];
+	6 -> 11 [arrowsize="0.35", color="#0d0f73", fontcolor="#0d0f73", fontsize="10.00", label="0.55%\n50595×", labeldistance="0.50", penwidth="0.50"];
+	7 [color="#0c6489", fontcolor="#ffffff", fontsize="10.00", label="train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&)\n17.45%\n(1.16%)"];
+	7 -> 6 [arrowsize="0.40", color="#0c5d88", fontcolor="#0c5d88", fontsize="10.00", label="16.29%\n663904×", labeldistance="0.65", penwidth="0.65"];
+	8 [color="#0d1776", fontcolor="#ffffff", fontsize="10.00", label="std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()\n2.48%\n(2.48%)\n1360885161×"];
+	9 [color="#0d1274", fontcolor="#ffffff", fontsize="10.00", label="SMat<float>::SMat(int, int, int, bool)\n1.26%\n(1.26%)\n49149×"];
+	10 [color="#0d0f73", fontcolor="#ffffff", fontsize="10.00", label="partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&)\n0.55%\n(0.15%)\n8191×"];
+	10 -> 6 [arrowsize="0.35", color="#0d0e73", fontcolor="#0d0e73", fontsize="10.00", label="0.40%\n16382×", labeldistance="0.50", penwidth="0.50"];
+	11 [color="#0d0f73", fontcolor="#ffffff", fontsize="10.00", label="exponentiate_scores(SMat<float>*)\n0.55%\n(0.12%)\n50595×"];
+}

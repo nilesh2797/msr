@@ -1,0 +1,23 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#fb1a01", fontcolor="#ffffff", fontsize="10.00", label="train_tree(SMat<float>*, SMat<float>*, SMat<float>*, Param&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)\n97.49%\n(3.84%)\n1×"];
+	1 -> 4 [arrowsize="0.91", color="#e5a104", fontcolor="#e5a104", fontsize="10.00", label="82.49%\n1023×", labeldistance="3.30", penwidth="3.30"];
+	1 -> 6 [arrowsize="0.35", color="#0d3b80", fontcolor="#0d3b80", fontsize="10.00", label="10.05%\n511×", labeldistance="0.50", penwidth="0.50"];
+	1 -> 8 [arrowsize="0.35", color="#0d0d73", fontcolor="#0d0d73", fontsize="10.00", label="0.16%\n3061×", labeldistance="0.50", penwidth="0.50"];
+	1 -> 9 [arrowsize="0.35", color="#0d1074", fontcolor="#0d1074", fontsize="10.00", label="0.89%\n3069×", labeldistance="0.50", penwidth="0.50"];
+	2 [color="#fb1a01", fontcolor="#ffffff", fontsize="10.00", label="train_trees_thread(SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*)\n97.49%\n(0.00%)\n1×"];
+	2 -> 1 [arrowsize="0.99", color="#fb1a01", fontcolor="#fb1a01", fontsize="10.00", label="97.49%\n1×", labeldistance="3.90", penwidth="3.90"];
+	3 [color="#fb1a01", fontcolor="#ffffff", fontsize="10.00", label="std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*), SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::reference_wrapper<float*> > > >::_M_run()\n97.49%\n(0.00%)"];
+	3 -> 2 [arrowsize="0.99", color="#fb1a01", fontcolor="#fb1a01", fontsize="10.00", label="97.49%\n1×", labeldistance="3.90", penwidth="3.90"];
+	4 [color="#e5a104", fontcolor="#ffffff", fontsize="10.00", label="svms(SMat<float>*, SMat<float>*, Param&)\n82.49%\n(0.66%)\n1023×"];
+	4 -> 5 [arrowsize="0.90", color="#e4a704", fontcolor="#e4a704", fontsize="10.00", label="81.82%\n31960×", labeldistance="3.27", penwidth="3.27"];
+	5 [color="#e4a704", fontcolor="#ffffff", fontsize="10.00", label="solve_l2r_l1l2_svc(SMat<float>*, int*, float*, float, float, float, int)\n81.82%\n(81.51%)\n31960×"];
+	6 [color="#0d3b80", fontcolor="#ffffff", fontsize="10.00", label="balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&)\n10.05%\n(9.99%)\n511×"];
+	7 [color="#0d1776", fontcolor="#ffffff", fontsize="10.00", label="train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&)\n2.40%\n(0.88%)"];
+	7 -> 8 [arrowsize="0.35", color="#0d1375", fontcolor="#0d1375", fontsize="10.00", label="1.52%\n29900×", labeldistance="0.50", penwidth="0.50"];
+	8 [color="#0d1475", fontcolor="#ffffff", fontsize="10.00", label="predict_tree(SMat<float>*, Tree*, Param&)\n1.72%\n(1.71%)\n16215079×"];
+	8 -> 8 [arrowsize="0.35", color="#0d1475", fontcolor="#0d1475", fontsize="10.00", label="16181096×", labeldistance="0.50", penwidth="0.50"];
+	9 [color="#0d1074", fontcolor="#ffffff", fontsize="10.00", label="SMat<float>::SMat(int, int, int, bool)\n0.89%\n(0.89%)\n3069×"];
+}

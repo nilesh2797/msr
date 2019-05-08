@@ -1,0 +1,305 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 63.19     30.18    30.18    16383     1.84     1.84  solve_l2r_l1l2_svc(SMat<float>*, int*, float*, float, float, float, int)
+  7.37     33.70     3.52 1797980448     0.00     0.00  std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&)
+  6.05     36.59     2.89                             partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&)
+  5.95     39.43     2.84   153026     0.02     0.27  train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&)
+  5.34     41.98     2.55   306050     0.01     0.01  predict_trees(SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&, float&)
+  4.06     43.92     1.94   174766     0.01     0.01  Tree::Tree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int)
+  3.37     45.53     1.61   169408     0.01     0.02  balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&)
+  2.47     46.71     1.18                             etext
+  0.36     46.88     0.17                             setup_thread_locals(int, int, int)
+  0.34     47.04     0.16   190712     0.00     0.00  SMat<float>::SMat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+  0.34     47.20     0.16                             predict_tree(SMat<float>*, Tree*, Param&)
+  0.27     47.33     0.13                             std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > __gnu_cxx::__to_xstring<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>(int (*)(char*, unsigned long, char const*, __va_list_tag*), unsigned long, char const*, ...) [clone .constprop.211]
+  0.19     47.42     0.09                             mult_d_s_vec(float*, std::pair<int, float>*, int)
+  0.19     47.51     0.09                             void std::__introsort_loop<std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>)
+  0.15     47.58     0.07                             exponentiate_scores(SMat<float>*)
+  0.10     47.63     0.05                             void std::__adjust_heap<std::pair<int, float>*, long, std::pair<int, float>, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, long, long, std::pair<int, float>, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>)
+  0.08     47.67     0.04  1683275     0.00     0.00  reset_2d_float(int, int, float**&)
+  0.06     47.70     0.03        1    30.00    43.55  div_d_vec_by_scalar(float*, int, float)
+  0.06     47.73     0.03                             add_s_to_d_vec(std::pair<int, float>*, int, float*)
+  0.04     47.75     0.02   153025     0.00     0.00  get_norm_d_vec(float*, int)
+  0.02     47.76     0.01  1836301     0.00     0.00  operator>>(std::istream&, SMat<float>&)
+  0.00     47.76     0.00 14447049     0.00     0.00  _fini
+  0.00     47.76     0.00    16383     0.00     0.00  void std::vector<std::thread, std::allocator<std::thread> >::_M_realloc_insert<std::thread>(__gnu_cxx::__normal_iterator<std::thread*, std::vector<std::thread, std::allocator<std::thread> > >, std::thread&&)
+  0.00     47.76     0.00       15     0.00     0.00  void std::vector<std::pair<int, float>, std::allocator<std::pair<int, float> > >::_M_realloc_insert<std::pair<int, float> >(__gnu_cxx::__normal_iterator<std::pair<int, float>*, std::vector<std::pair<int, float>, std::allocator<std::pair<int, float> > > >, std::pair<int, float>&&)
+  0.00     47.76     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z4helpv
+  0.00     47.76     0.00        1     0.00     0.00  predict_trees_thread(SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*, float*)
+  0.00     47.76     0.00        1     0.00     0.00  void std::__adjust_heap<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, int, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, long, int, __gnu_cxx::__ops::_Iter_less_iter)
+  0.00     47.76     0.00        1     0.00     0.00  main
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.02% of 47.76 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     91.8    2.89   40.94                 partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&) [1]
+                2.84   38.08  153026/153026      train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [2]
+                0.01    0.00   16384/190712      SMat<float>::SMat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [13]
+                0.01    0.00 1683275/1836301     operator>>(std::istream&, SMat<float>&) [21]
+                0.00    0.00       1/1           void std::__adjust_heap<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, int, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, long, int, __gnu_cxx::__ops::_Iter_less_iter) [33]
+-----------------------------------------------
+                             14384351             train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [2]
+                2.84   38.08  153026/153026      partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&) [1]
+[2]     85.7    2.84   38.08  153026+14384351 train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [2]
+               30.18    0.00   16383/16383       solve_l2r_l1l2_svc(SMat<float>*, int*, float*, float, float, float, int) [3]
+                1.61    1.84  169408/169408      balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [5]
+                2.55    0.00  306050/306050      predict_trees(SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&, float&) [7]
+                1.87    0.00 956747121/1797980448     std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) [4]
+                0.02    0.00  153025/153025      get_norm_d_vec(float*, int) [20]
+                0.00    0.00  153025/1683275     reset_2d_float(int, int, float**&) [18]
+                0.00    0.00  153025/1836301     operator>>(std::istream&, SMat<float>&) [21]
+                             14384351             train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [2]
+-----------------------------------------------
+               30.18    0.00   16383/16383       train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [2]
+[3]     63.2   30.18    0.00   16383         solve_l2r_l1l2_svc(SMat<float>*, int*, float*, float, float, float, int) [3]
+-----------------------------------------------
+                0.01    0.00 6919511/1797980448     div_d_vec_by_scalar(float*, int, float) [17]
+                0.04    0.00 22339788/1797980448     balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [5]
+                0.15    0.00 76028564/1797980448     mult_d_s_vec(float*, std::pair<int, float>*, int) [9]
+                1.44    0.00 735945464/1797980448     etext [6]
+                1.87    0.00 956747121/1797980448     train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [2]
+[4]      7.4    3.52    0.00 1797980448         std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) [4]
+-----------------------------------------------
+                             1530250             balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [5]
+                1.61    1.84  169408/169408      train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [2]
+[5]      7.2    1.61    1.84  169408+1530250 balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [5]
+                1.76    0.00  158383/174766      Tree::Tree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) [8]
+                0.04    0.00 22339788/1797980448     std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) [4]
+                0.04    0.00 1530250/1683275     reset_2d_float(int, int, float**&) [18]
+                0.00    0.00 2367081/14447049     _fini [28]
+                             1530250             balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [5]
+-----------------------------------------------
+                                                 <spontaneous>
+[6]      6.0    1.18    1.67                 etext [6]
+                1.44    0.00 735945464/1797980448     std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) [4]
+                0.18    0.00   16383/174766      Tree::Tree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) [8]
+                0.03    0.01       1/1           div_d_vec_by_scalar(float*, int, float) [17]
+                0.00    0.00 12055216/14447049     _fini [28]
+                0.00    0.00   16383/16383       void std::vector<std::thread, std::allocator<std::thread> >::_M_realloc_insert<std::thread>(__gnu_cxx::__normal_iterator<std::thread*, std::vector<std::thread, std::allocator<std::thread> > >, std::thread&&) [29]
+                0.00    0.00      15/15          void std::vector<std::pair<int, float>, std::allocator<std::pair<int, float> > >::_M_realloc_insert<std::pair<int, float> >(__gnu_cxx::__normal_iterator<std::pair<int, float>*, std::vector<std::pair<int, float>, std::allocator<std::pair<int, float> > > >, std::pair<int, float>&&) [30]
+                0.00    0.00       1/1           _GLOBAL__sub_I__Z4helpv [31]
+                0.00    0.00       1/1           main [22]
+-----------------------------------------------
+                             14412191             predict_trees(SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&, float&) [7]
+                2.55    0.00  306050/306050      train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [2]
+[7]      5.3    2.55    0.00  306050+14412191 predict_trees(SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&, float&) [7]
+                0.00    0.00   24752/14447049     _fini [28]
+                             14412191             predict_trees(SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&, float&) [7]
+-----------------------------------------------
+                0.18    0.00   16383/174766      etext [6]
+                1.76    0.00  158383/174766      balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [5]
+[8]      4.1    1.94    0.00  174766         Tree::Tree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) [8]
+-----------------------------------------------
+                                                 <spontaneous>
+[9]      0.5    0.09    0.15                 mult_d_s_vec(float*, std::pair<int, float>*, int) [9]
+                0.15    0.00 76028564/1797980448     std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) [4]
+-----------------------------------------------
+                                                 <spontaneous>
+[10]     0.4    0.05    0.15                 void std::__adjust_heap<std::pair<int, float>*, long, std::pair<int, float>, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, long, long, std::pair<int, float>, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>) [10]
+                0.15    0.00  174302/190712      SMat<float>::SMat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [13]
+-----------------------------------------------
+                                                 <spontaneous>
+[11]     0.4    0.17    0.00                 setup_thread_locals(int, int, int) [11]
+                0.00    0.00      26/190712      SMat<float>::SMat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [13]
+-----------------------------------------------
+                                                 <spontaneous>
+[12]     0.3    0.16    0.00                 predict_tree(SMat<float>*, Tree*, Param&) [12]
+                0.00    0.00       1/1836301     operator>>(std::istream&, SMat<float>&) [21]
+-----------------------------------------------
+                0.00    0.00      26/190712      setup_thread_locals(int, int, int) [11]
+                0.01    0.00   16384/190712      partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&) [1]
+                0.15    0.00  174302/190712      void std::__adjust_heap<std::pair<int, float>*, long, std::pair<int, float>, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, long, long, std::pair<int, float>, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>) [10]
+[13]     0.3    0.16    0.00  190712         SMat<float>::SMat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [13]
+-----------------------------------------------
+                                                 <spontaneous>
+[14]     0.3    0.13    0.00                 std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > __gnu_cxx::__to_xstring<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>(int (*)(char*, unsigned long, char const*, __va_list_tag*), unsigned long, char const*, ...) [clone .constprop.211] [14]
+-----------------------------------------------
+                                                 <spontaneous>
+[15]     0.2    0.09    0.00                 void std::__introsort_loop<std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>) [15]
+-----------------------------------------------
+                                                 <spontaneous>
+[16]     0.1    0.07    0.00                 exponentiate_scores(SMat<float>*) [16]
+-----------------------------------------------
+                0.03    0.01       1/1           etext [6]
+[17]     0.1    0.03    0.01       1         div_d_vec_by_scalar(float*, int, float) [17]
+                0.01    0.00 6919511/1797980448     std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) [4]
+-----------------------------------------------
+                0.00    0.00  153025/1683275     train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [2]
+                0.04    0.00 1530250/1683275     balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [5]
+[18]     0.1    0.04    0.00 1683275         reset_2d_float(int, int, float**&) [18]
+-----------------------------------------------
+                                                 <spontaneous>
+[19]     0.1    0.03    0.00                 add_s_to_d_vec(std::pair<int, float>*, int, float*) [19]
+-----------------------------------------------
+                0.02    0.00  153025/153025      train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [2]
+[20]     0.0    0.02    0.00  153025         get_norm_d_vec(float*, int) [20]
+-----------------------------------------------
+                0.00    0.00       1/1836301     predict_tree(SMat<float>*, Tree*, Param&) [12]
+                0.00    0.00  153025/1836301     train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [2]
+                0.01    0.00 1683275/1836301     partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&) [1]
+[21]     0.0    0.01    0.00 1836301         operator>>(std::istream&, SMat<float>&) [21]
+-----------------------------------------------
+                0.00    0.00       1/1           etext [6]
+[22]     0.0    0.00    0.00       1         main [22]
+-----------------------------------------------
+                0.00    0.00   24752/14447049     predict_trees(SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&, float&) [7]
+                0.00    0.00 2367081/14447049     balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [5]
+                0.00    0.00 12055216/14447049     etext [6]
+[28]     0.0    0.00    0.00 14447049         _fini [28]
+-----------------------------------------------
+                0.00    0.00   16383/16383       etext [6]
+[29]     0.0    0.00    0.00   16383         void std::vector<std::thread, std::allocator<std::thread> >::_M_realloc_insert<std::thread>(__gnu_cxx::__normal_iterator<std::thread*, std::vector<std::thread, std::allocator<std::thread> > >, std::thread&&) [29]
+-----------------------------------------------
+                0.00    0.00      15/15          etext [6]
+[30]     0.0    0.00    0.00      15         void std::vector<std::pair<int, float>, std::allocator<std::pair<int, float> > >::_M_realloc_insert<std::pair<int, float> >(__gnu_cxx::__normal_iterator<std::pair<int, float>*, std::vector<std::pair<int, float>, std::allocator<std::pair<int, float> > > >, std::pair<int, float>&&) [30]
+-----------------------------------------------
+                0.00    0.00       1/1           etext [6]
+[31]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z4helpv [31]
+-----------------------------------------------
+                0.00    0.00       1/1           void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [78]
+[32]     0.0    0.00    0.00       1         predict_trees_thread(SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*, float*) [32]
+-----------------------------------------------
+                0.00    0.00       1/1           partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&) [1]
+[33]     0.0    0.00    0.00       1         void std::__adjust_heap<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, int, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, long, int, __gnu_cxx::__ops::_Iter_less_iter) [33]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [31] _GLOBAL__sub_I__Z4helpv (parabel_train.cpp) [17] div_d_vec_by_scalar(float*, int, float) [4] std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&)
+   [2] train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [16] exponentiate_scores(SMat<float>*) [33] void std::__adjust_heap<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, int, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, long, int, __gnu_cxx::__ops::_Iter_less_iter)
+   [9] mult_d_s_vec(float*, std::pair<int, float>*, int) [11] setup_thread_locals(int, int, int) [10] void std::__adjust_heap<std::pair<int, float>*, long, std::pair<int, float>, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, long, long, std::pair<int, float>, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>)
+  [12] predict_tree(SMat<float>*, Tree*, Param&) [32] predict_trees_thread(SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*, float*) [15] void std::__introsort_loop<std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>)
+   [7] predict_trees(SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&, float&) [1] partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&) [21] operator>>(std::istream&, SMat<float>&)
+  [19] add_s_to_d_vec(std::pair<int, float>*, int, float*) [13] SMat<float>::SMat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [28] _fini
+  [20] get_norm_d_vec(float*, int) [8] Tree::Tree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) [6] etext
+  [18] reset_2d_float(int, int, float**&) [14] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > __gnu_cxx::__to_xstring<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>(int (*)(char*, unsigned long, char const*, __va_list_tag*), unsigned long, char const*, ...) [clone .constprop.211] (string_conversions.h) [22] main
+   [5] balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [30] void std::vector<std::pair<int, float>, std::allocator<std::pair<int, float> > >::_M_realloc_insert<std::pair<int, float> >(__gnu_cxx::__normal_iterator<std::pair<int, float>*, std::vector<std::pair<int, float>, std::allocator<std::pair<int, float> > > >, std::pair<int, float>&&)
+   [3] solve_l2r_l1l2_svc(SMat<float>*, int*, float*, float, float, float, int) [29] void std::vector<std::thread, std::allocator<std::thread> >::_M_realloc_insert<std::thread>(__gnu_cxx::__normal_iterator<std::thread*, std::vector<std::thread, std::allocator<std::thread> > >, std::thread&&)

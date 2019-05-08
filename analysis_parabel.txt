@@ -1,0 +1,318 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 67.12    301.11   301.11   686473     0.00     0.00  solve_l2r_l1l2_svc(SMat<float>*, int*, float*, float, float, float, int)
+ 17.43    379.30    78.19   737618     0.00     0.00  balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&)
+  7.83    414.44    35.13        1    35.13   368.40  train_tree(SMat<float>*, SMat<float>*, SMat<float>*, Param&, int)
+  2.48    425.58    11.14 1360885161     0.00     0.00  std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+  1.46    432.15     6.57    16383     0.00     0.02  svms(SMat<float>*, SMat<float>*, Param&)
+  1.26    437.79     5.64    49149     0.00     0.00  SMat<float>::SMat(int, int, int, bool)
+  1.16    442.99     5.20                             train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&)
+  0.41    444.81     1.82 804985482     0.00     0.00  bool comp_pair_by_second_desc<int, float>(std::pair<int, float>, std::pair<int, float>)
+  0.20    445.69     0.88                             SMat<float>::SMat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+  0.19    446.56     0.87        1     0.87     0.87  Tree::write(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int)
+  0.15    447.23     0.67     8191     0.00     0.00  partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&)
+  0.13    447.82     0.59   235211     0.00     0.00  void std::__introsort_loop<std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>)
+  0.12    448.35     0.53    50595     0.00     0.00  exponentiate_scores(SMat<float>*)
+  0.04    448.54     0.19                             TLS init function for countmap
+  0.01    448.59     0.05  2394059     0.00     0.00  void std::__adjust_heap<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, int, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, long, int, __gnu_cxx::__ops::_Iter_less_iter)
+  0.00    448.61     0.02    73725     0.00     0.00  SMat<float>::~SMat()
+  0.00    448.62     0.01  1840576     0.00     0.00  void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&)
+  0.00    448.63     0.01    50595     0.00     0.00  void std::__insertion_sort<std::pair<int, float>*, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>) [clone .constprop.205]
+  0.00    448.64     0.01        1     0.01   369.29  train_trees_thread(SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*)
+  0.00    448.65     0.01                             void std::__adjust_heap<std::pair<int, float>*, long, std::pair<int, float>, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, long, long, std::pair<int, float>, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>)
+  0.00    448.65     0.01                             solve_l2r_lr_dual(SMat<float>*, int*, float*, float, float, float, int)
+  0.00    448.65     0.00     8191     0.00     0.00  std::vector<int, std::allocator<int> >::_M_default_append(unsigned long)
+  0.00    448.65     0.00       16     0.00     0.00  void std::vector<float, std::allocator<float> >::_M_realloc_insert<float>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float&&)
+  0.00    448.65     0.00       16     0.00     0.00  void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&)
+  0.00    448.65     0.00       15     0.00     0.00  void std::vector<Node*, std::allocator<Node*> >::_M_realloc_insert<Node* const&>(__gnu_cxx::__normal_iterator<Node**, std::vector<Node*, std::allocator<Node*> > >, Node* const&)
+  0.00    448.65     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z4helpv
+  0.00    448.65     0.00        1     0.00     0.00  _GLOBAL__sub_I_mtx
+  0.00    448.65     0.00        1     0.00     0.00  init_root(int, int)
+  0.00    448.65     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > __gnu_cxx::__to_xstring<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>(int (*)(char*, unsigned long, char const*, __va_list_tag*), unsigned long, char const*, ...) [clone .constprop.209]
+  0.00    448.65     0.00        1     0.00     0.00  void std::vector<std::thread, std::allocator<std::thread> >::_M_realloc_insert<std::thread>(__gnu_cxx::__normal_iterator<std::thread*, std::vector<std::thread, std::allocator<std::thread> > >, std::thread&&)
+  0.00    448.65     0.00        1     0.00     0.00  std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.00% of 448.65 seconds
+
+index % time    self  children    called     name
+                0.01  369.28       1/1           std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*), SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::reference_wrapper<float*> > > >::_M_run() [2]
+[1]     82.3    0.01  369.28       1         train_trees_thread(SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*) [1]
+               35.13  333.27       1/1           train_tree(SMat<float>*, SMat<float>*, SMat<float>*, Param&, int) [3]
+                0.87    0.00       1/1           Tree::write(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) [15]
+                0.00    0.00   16383/73725       SMat<float>::~SMat() [18]
+                0.00    0.00       1/1           std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) [39]
+-----------------------------------------------
+                                                 <spontaneous>
+[2]     82.3    0.00  369.29                 std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*), SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::reference_wrapper<float*> > > >::_M_run() [2]
+                0.01  369.28       1/1           train_trees_thread(SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*) [1]
+-----------------------------------------------
+               35.13  333.27       1/1           train_trees_thread(SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*) [1]
+[3]     82.1   35.13  333.27       1         train_tree(SMat<float>*, SMat<float>*, SMat<float>*, Param&, int) [3]
+                6.57  312.25   16383/16383       svms(SMat<float>*, SMat<float>*, Param&) [4]
+                6.08    0.23   57332/737618      balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [6]
+                5.64    0.00   49149/49149       SMat<float>::SMat(int, int, int, bool) [9]
+                0.67    1.81    8191/8191        partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&) [10]
+                0.02    0.00   57340/73725       SMat<float>::~SMat() [18]
+                0.01    0.00 1372636/1840576     void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [20]
+                0.00    0.00      15/15          void std::vector<Node*, std::allocator<Node*> >::_M_realloc_insert<Node* const&>(__gnu_cxx::__normal_iterator<Node**, std::vector<Node*, std::allocator<Node*> > >, Node* const&) [33]
+                0.00    0.00       1/1           init_root(int, int) [36]
+-----------------------------------------------
+                6.57  312.25   16383/16383       train_tree(SMat<float>*, SMat<float>*, SMat<float>*, Param&, int) [3]
+[4]     71.1    6.57  312.25   16383         svms(SMat<float>*, SMat<float>*, Param&) [4]
+              301.11   11.14  686473/686473      solve_l2r_l1l2_svc(SMat<float>*, int*, float*, float, float, float, int) [5]
+-----------------------------------------------
+              301.11   11.14  686473/686473      svms(SMat<float>*, SMat<float>*, Param&) [4]
+[5]     69.6  301.11   11.14  686473         solve_l2r_l1l2_svc(SMat<float>*, int*, float*, float, float, float, int) [5]
+               11.14    0.00 1360868744/1360885161     std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [8]
+-----------------------------------------------
+                             42342022             balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [6]
+                1.74    0.07   16382/737618      partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&) [10]
+                6.08    0.23   57332/737618      train_tree(SMat<float>*, SMat<float>*, SMat<float>*, Param&, int) [3]
+               70.38    2.70  663904/737618      train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [7]
+[6]     18.1   78.19    3.00  737618+42342022 balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [6]
+                0.53    1.95   50595/50595       exponentiate_scores(SMat<float>*) [11]
+                0.46    0.00 203458414/804985482     bool comp_pair_by_second_desc<int, float>(std::pair<int, float>, std::pair<int, float>) [13]
+                0.05    0.00 2394059/2394059     void std::__adjust_heap<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, int, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, long, int, __gnu_cxx::__ops::_Iter_less_iter) [17]
+                0.01    0.01   50595/50595       void std::__insertion_sort<std::pair<int, float>*, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>) [clone .constprop.205] [19]
+                0.00    0.00   16417/1360885161     std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [8]
+                0.00    0.00    8191/8191        std::vector<int, std::allocator<int> >::_M_default_append(unsigned long) [30]
+                             42342022             balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [6]
+-----------------------------------------------
+                                                 <spontaneous>
+[7]     17.4    5.20   73.08                 train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [7]
+               70.38    2.70  663904/737618      balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [6]
+                0.00    0.00       2/73725       SMat<float>::~SMat() [18]
+                0.00    0.00       1/1           void std::vector<std::thread, std::allocator<std::thread> >::_M_realloc_insert<std::thread>(__gnu_cxx::__normal_iterator<std::thread*, std::vector<std::thread, std::allocator<std::thread> > >, std::thread&&) [38]
+-----------------------------------------------
+                0.00    0.00   16417/1360885161     balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [6]
+               11.14    0.00 1360868744/1360885161     solve_l2r_l1l2_svc(SMat<float>*, int*, float*, float, float, float, int) [5]
+[8]      2.5   11.14    0.00 1360885161         std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [8]
+-----------------------------------------------
+                5.64    0.00   49149/49149       train_tree(SMat<float>*, SMat<float>*, SMat<float>*, Param&, int) [3]
+[9]      1.3    5.64    0.00   49149         SMat<float>::SMat(int, int, int, bool) [9]
+-----------------------------------------------
+                0.67    1.81    8191/8191        train_tree(SMat<float>*, SMat<float>*, SMat<float>*, Param&, int) [3]
+[10]     0.6    0.67    1.81    8191         partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&) [10]
+                1.74    0.07   16382/737618      balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [6]
+                0.00    0.00  467940/1840576     void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [20]
+-----------------------------------------------
+                0.53    1.95   50595/50595       balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [6]
+[11]     0.6    0.53    1.95   50595         exponentiate_scores(SMat<float>*) [11]
+                0.59    1.36  235211/235211      void std::__introsort_loop<std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>) [12]
+-----------------------------------------------
+                             5730734             void std::__introsort_loop<std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>) [12]
+                0.59    1.36  235211/235211      exponentiate_scores(SMat<float>*) [11]
+[12]     0.4    0.59    1.36  235211+5730734 void std::__introsort_loop<std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>) [12]
+                1.36    0.00 599287237/804985482     bool comp_pair_by_second_desc<int, float>(std::pair<int, float>, std::pair<int, float>) [13]
+                             5730734             void std::__introsort_loop<std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>) [12]
+-----------------------------------------------
+                0.01    0.00 2239831/804985482     void std::__insertion_sort<std::pair<int, float>*, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>) [clone .constprop.205] [19]
+                0.46    0.00 203458414/804985482     balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [6]
+                1.36    0.00 599287237/804985482     void std::__introsort_loop<std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>) [12]
+[13]     0.4    1.82    0.00 804985482         bool comp_pair_by_second_desc<int, float>(std::pair<int, float>, std::pair<int, float>) [13]
+-----------------------------------------------
+                                                 <spontaneous>
+[14]     0.2    0.88    0.00                 SMat<float>::SMat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [14]
+                0.00    0.00      16/16          void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) [32]
+                0.00    0.00      16/16          void std::vector<float, std::allocator<float> >::_M_realloc_insert<float>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float&&) [31]
+-----------------------------------------------
+                0.87    0.00       1/1           train_trees_thread(SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*) [1]
+[15]     0.2    0.87    0.00       1         Tree::write(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) [15]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > __gnu_cxx::__to_xstring<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>(int (*)(char*, unsigned long, char const*, __va_list_tag*), unsigned long, char const*, ...) [clone .constprop.209] [37]
+-----------------------------------------------
+                                                 <spontaneous>
+[16]     0.0    0.19    0.00                 TLS init function for countmap [16]
+-----------------------------------------------
+                0.05    0.00 2394059/2394059     balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [6]
+[17]     0.0    0.05    0.00 2394059         void std::__adjust_heap<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, int, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, long, int, __gnu_cxx::__ops::_Iter_less_iter) [17]
+-----------------------------------------------
+                0.00    0.00       2/73725       train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [7]
+                0.00    0.00   16383/73725       train_trees_thread(SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*) [1]
+                0.02    0.00   57340/73725       train_tree(SMat<float>*, SMat<float>*, SMat<float>*, Param&, int) [3]
+[18]     0.0    0.02    0.00   73725         SMat<float>::~SMat() [18]
+-----------------------------------------------
+                0.01    0.01   50595/50595       balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [6]
+[19]     0.0    0.01    0.01   50595         void std::__insertion_sort<std::pair<int, float>*, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>) [clone .constprop.205] [19]
+                0.01    0.00 2239831/804985482     bool comp_pair_by_second_desc<int, float>(std::pair<int, float>, std::pair<int, float>) [13]
+-----------------------------------------------
+                0.00    0.00  467940/1840576     partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&) [10]
+                0.01    0.00 1372636/1840576     train_tree(SMat<float>*, SMat<float>*, SMat<float>*, Param&, int) [3]
+[20]     0.0    0.01    0.00 1840576         void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [20]
+-----------------------------------------------
+                                                 <spontaneous>
+[21]     0.0    0.01    0.00                 void std::__adjust_heap<std::pair<int, float>*, long, std::pair<int, float>, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, long, long, std::pair<int, float>, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>) [21]
+-----------------------------------------------
+                                                 <spontaneous>
+[22]     0.0    0.01    0.00                 solve_l2r_lr_dual(SMat<float>*, int*, float*, float, float, float, int) [22]
+-----------------------------------------------
+                0.00    0.00    8191/8191        balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [6]
+[30]     0.0    0.00    0.00    8191         std::vector<int, std::allocator<int> >::_M_default_append(unsigned long) [30]
+-----------------------------------------------
+                0.00    0.00      16/16          SMat<float>::SMat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [14]
+[31]     0.0    0.00    0.00      16         void std::vector<float, std::allocator<float> >::_M_realloc_insert<float>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float&&) [31]
+-----------------------------------------------
+                0.00    0.00      16/16          SMat<float>::SMat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [14]
+[32]     0.0    0.00    0.00      16         void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) [32]
+-----------------------------------------------
+                0.00    0.00      15/15          train_tree(SMat<float>*, SMat<float>*, SMat<float>*, Param&, int) [3]
+[33]     0.0    0.00    0.00      15         void std::vector<Node*, std::allocator<Node*> >::_M_realloc_insert<Node* const&>(__gnu_cxx::__normal_iterator<Node**, std::vector<Node*, std::allocator<Node*> > >, Node* const&) [33]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [85]
+[34]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z4helpv [34]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [85]
+[35]     0.0    0.00    0.00       1         _GLOBAL__sub_I_mtx [35]
+-----------------------------------------------
+                0.00    0.00       1/1           train_tree(SMat<float>*, SMat<float>*, SMat<float>*, Param&, int) [3]
+[36]     0.0    0.00    0.00       1         init_root(int, int) [36]
+-----------------------------------------------
+                0.00    0.00       1/1           Tree::write(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) [15]
+[37]     0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > __gnu_cxx::__to_xstring<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>(int (*)(char*, unsigned long, char const*, __va_list_tag*), unsigned long, char const*, ...) [clone .constprop.209] [37]
+-----------------------------------------------
+                0.00    0.00       1/1           train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [7]
+[38]     0.0    0.00    0.00       1         void std::vector<std::thread, std::allocator<std::thread> >::_M_realloc_insert<std::thread>(__gnu_cxx::__normal_iterator<std::thread*, std::vector<std::thread, std::allocator<std::thread> > >, std::thread&&) [38]
+-----------------------------------------------
+                0.00    0.00       1/1           train_trees_thread(SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*) [1]
+[39]     0.0    0.00    0.00       1         std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) [39]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [34] _GLOBAL__sub_I__Z4helpv (parabel_train.cpp) [4] svms(SMat<float>*, SMat<float>*, Param&) [39] std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&)
+  [35] _GLOBAL__sub_I_mtx (parabel.cpp) [36] init_root(int, int) [30] std::vector<int, std::allocator<int> >::_M_default_append(unsigned long)
+   [3] train_tree(SMat<float>*, SMat<float>*, SMat<float>*, Param&, int) [14] SMat<float>::SMat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [20] void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&)
+   [7] train_trees(SMat<float>*, SMat<float>*, Param&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float&) [9] SMat<float>::SMat(int, int, int, bool) [32] void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&)
+   [6] balanced_kmeans(SMat<float>*, float, std::vector<int, std::allocator<int> >&) [18] SMat<float>::~SMat() [17] void std::__adjust_heap<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, int, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, long, int, __gnu_cxx::__ops::_Iter_less_iter)
+  [22] solve_l2r_lr_dual(SMat<float>*, int*, float*, float, float, float, int) [15] Tree::write(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) [21] void std::__adjust_heap<std::pair<int, float>*, long, std::pair<int, float>, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, long, long, std::pair<int, float>, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>)
+   [5] solve_l2r_l1l2_svc(SMat<float>*, int*, float*, float, float, float, int) [37] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > __gnu_cxx::__to_xstring<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>(int (*)(char*, unsigned long, char const*, __va_list_tag*), unsigned long, char const*, ...) [clone .constprop.209] (string_conversions.h) [19] void std::__insertion_sort<std::pair<int, float>*, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>) [clone .constprop.205] (stl_algo.h)
+   [1] train_trees_thread(SMat<float>*, SMat<float>*, SMat<float>*, Param, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float*) [8] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [12] void std::__introsort_loop<std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)> >(std::pair<int, float>*, std::pair<int, float>*, long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<int, float>, std::pair<int, float>)>)
+  [11] exponentiate_scores(SMat<float>*) [33] void std::vector<Node*, std::allocator<Node*> >::_M_realloc_insert<Node* const&>(__gnu_cxx::__normal_iterator<Node**, std::vector<Node*, std::allocator<Node*> > >, Node* const&) [16] TLS init function for countmap
+  [10] partition_to_assign_mat(SMat<float>*, std::vector<int, std::allocator<int> >&) [38] void std::vector<std::thread, std::allocator<std::thread> >::_M_realloc_insert<std::thread>(__gnu_cxx::__normal_iterator<std::thread*, std::vector<std::thread, std::allocator<std::thread> > >, std::thread&&)
+  [13] bool comp_pair_by_second_desc<int, float>(std::pair<int, float>, std::pair<int, float>) [31] void std::vector<float, std::allocator<float> >::_M_realloc_insert<float>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float&&)

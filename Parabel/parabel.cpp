@@ -662,9 +662,15 @@ void train_trees_thread( SMatF* trn_X_Xf, SMatF* trn_Y_X, SMatF* cent_mat, Param
 			*train_time += timer.toc();
 		}
 
+		high_resolution_clock::time_point t1 = high_resolution_clock::now();
 		tree->write( model_dir, i );
+		high_resolution_clock::time_point t2 = high_resolution_clock::now();
+
+		auto write_duration = duration_cast<microseconds>( t2 - t1 ).count();
+		cout << "model writing time : " << write_duration/1000000.0 << " microseconds" << endl;
 
 		timer.tic();
+
 		delete tree;
 
 		cout<<"tree "<<i<<" training completed"<<endl;

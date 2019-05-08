@@ -1,5 +1,5 @@
 INC=-I../Tools/c++
-CXXFLAGS=-std=c++11 -O3 -g
+CXXFLAGS=-std=c++11 -O3 -g -pg
 LIBFLAGS=-pthread
 
 all: clean parabel_train parabel_predict
