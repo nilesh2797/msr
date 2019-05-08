@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# expects two arguments, e.g. ./run.sh Amazon ParabelOpt
+
 dataset=$1
 data_dir="Sandbox/Data/$dataset"
 results_dir="Sandbox/Results/$dataset"

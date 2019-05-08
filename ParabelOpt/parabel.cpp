@@ -575,7 +575,7 @@ void split_node( Node* node, SMatF* X_Xf, SMatF* Y_X, SMatF* cent_mat, _int nr, 
 }
 
 long long write_duration = 0, prepend_duration = 0, del_duration = 0;
-const size_t buffer_size = 131072;
+const size_t buffer_size = 1024*1024;
 stringstream ss;
 
 size_t getsize(stringstream& ss)
@@ -624,8 +624,6 @@ Tree* train_tree( SMatF* trn_X_Xf, SMatF* trn_Y_X, SMatF* cent_mat, Param& param
 
 	string filename = model_dir + "/" + to_string( tree_no ) + ".tree";
 	ofstream fout;
-	// std::vector<char> buf(65536);
-	// fout.rdbuf()->pubsetbuf(&buf.front(), buf.size());
 
 	fout.open( filename );
 
@@ -719,10 +717,7 @@ void train_trees_thread( SMatF* trn_X_Xf, SMatF* trn_Y_X, SMatF* cent_mat, Param
 			*train_time += timer.toc();
 		}
 
-		// tree->write( model_dir, i );
-
 		timer.tic();
-		// delete tree;
 
 		cout<<"tree "<<i<<" training completed"<<endl;
 		
